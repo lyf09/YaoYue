@@ -11,8 +11,8 @@ import retrofit2.http.Query;
 
 public interface UserService {
     @GET("LoginAction")
-    Call<List<Repo>> login(@Query("userid") String userid, @Query("userpassword") String userpassword);
+    Call<List<Repo>> login(@Query("userid") int userid, @Query("userpassword") String userpassword);
 
     @GET("RegisterAction")
-    Call<List<Repo>> register(@Query("userid") String userid, @Query("userpassword") String userpassword, @Query("email") String email);
+    Call<List<Repo>> register(@Query("userid") int userid, @Query("userpassword") String userpassword, @Query("email") String email);
 }
