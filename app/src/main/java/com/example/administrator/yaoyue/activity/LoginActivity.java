@@ -25,7 +25,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                startActivity(intent);
-
+                
+                //异步请求
                 Call<List<Repo>> call = DataSource.getUserService().login(userid,userpassword);
                 call.enqueue(new Callback<List<Repo>>() {
                     @Override
