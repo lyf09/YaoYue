@@ -10,5 +10,5 @@ import retrofit2.http.Path;
 
 public interface UserService {
     @GET("LoginAction")
-    Call<MessageData> login(@Path("userid") String userid, @Path("userpassword") String userpassword);
+    Call<List<Repo>> login(@Path("userid") String userid, @Path("userpassword") String userpassword);
 }
